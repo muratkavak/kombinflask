@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% if data %}
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">İd</th>
+      <th scope="col">İsim</th>
+      <th scope="col">Renk</th>
+      <th scope="col">Marka</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    {% for elbise in data %}
+    <tr>
+      <th scope="row">{{elbise.id}}</th>
+      <th scope="row">{{elbise.isim}}</th>
+      <th scope="row">{{elbise.renk}}</th>
+      <th scope="row">{{elbise.marka}}</th>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>      
+{% else %}
+    <div class="alert alert-danger">Dolabınızda yeterli kıyafet bulunmuyor. Bir sorun olustu.</div>
+{% endif %}
+
+{% endblock body %}

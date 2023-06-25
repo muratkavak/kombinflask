@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+{% if data %}
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">İd</th>
+      <th scope="col">İsim</th>
+      <th scope="col">Renk</th>
+      <th scope="col">Marka</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    {% for elbise in data %}
+    <tr>
+      <th scope="row">{{elbise.id}}</th>
+      <th scope="row">{{elbise.isim}}</th>
+      <th scope="row">{{elbise.renk}}</th>
+      <th scope="row">{{elbise.marka}}</th>
+      <td><a href="/delete/{{elbise.id}}" class="btn btn-danger">Sil</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>      
+{% else %}
+    <div class="alert alert-danger">Henüz bir eklenmiş kıyafetiniz bulunmamakta.</div>
+{% endif %}
+
+{% endblock body %}

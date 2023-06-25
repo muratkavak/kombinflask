@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h1>Kombin Oluştur</h1>
+<form method="POST">
+    <div class="form-group">
+        <label for="derece">Bölgendeki tahmini hava sıcaklığı nedir?</label>
+        <input type="text" class="form-control" id="derece" name="derece" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Kombin Oluştur</button>
+</form>
+
+
+{% endblock body %}
+

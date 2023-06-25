@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% if session["logged_in"] %}
+
+<h3>Hosgeldin {{session["username"]}} . Bugün Çok güzel görünüyorsun.</h3>
+
+{% else %}
+
+<h1>Kombin Oluşturma Sitemize Hoşgeldiniz</h1>
+
+<h3>İşlemlere devam edebilmek için kayıt olun. Hesabınız varsa giriş yapabilirsiniz.</h3>
+{% endif %}
+
+
+
+{% endblock body %}

@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% from "includes/formhelpers.html" import render_field %}
+
+<h3>Dolap</h3>
+    <small>Hosgeldiniz {{session["username"]}}</small>
+    <hr>
+
+    <a href="/addclothes" class="btn btn-danger">Elbise Ekle</a>
+    <a href="/changepassword" class="btn btn-danger">Şifre Değiştir</a>
+<hr>
+
+<h3>Elbise Kategorileriniz : </h3>
+
+<ul>
+  <li><a href="/yaz_ust">Yaz Üst</a></li>
+  <li><a href="/yaz_elbise">Yaz Elbise</a></li>
+  <li><a href="/yaz_ayakkabi">Yaz Ayakkabı</a></li>
+  <li><a href="/montt">Mont</a></li>
+  <li><a href="/kis_birincil_ust">Kış Birincil Üst</a></li>
+  <li><a href="/kis_ikincil_ust">Kış İkincil Üst</a></li>
+  <li><a href="/kis_ayakkabi">Kış Ayakkabı</a></li>
+  <li><a href="/alt_giyim">Alt Giyim</a></li>
+  <li><a href="/aksesuarr">Aksesuar</a></li>
+</ul>
+
+
+
+
+{% endblock body %}
